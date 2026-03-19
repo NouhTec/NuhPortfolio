@@ -1,165 +1,129 @@
 <!DOCTYPE html>
-<html lang="tr" dir="ltr">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Nouh ALMAGHRIBI | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نوح - Portfolio</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #4a90e2;
+    }
+
+    .profile-info {
+      text-align: left;
+    }
+
+    .profile-info h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .profile-info p {
+      margin: 5px 0 0;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .typing-text {
+      font-size: 18px;
+      color: #333;
+      margin-top: 20px;
+      height: 24px;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      background-color: #333;
+      animation: blink 0.7s infinite;
+      vertical-align: bottom;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+  </style>
 </head>
 <body>
-
-    <div class="bg-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
+  <div class="container">
+    <div class="profile">
+      <img src="your-photo.jpg" alt="نوح">
+      <div class="profile-info">
+        <h1>نوح</h1>
+        <p>Mekatronik Mühendisi</p>
+      </div>
     </div>
+    <div class="typing-text" id="typing"></div>
+  </div>
 
-    <nav>
-        <div class="logo">M. Nouh<span class="dot">.</span></div>
-        <ul class="nav-links">
-            <li><a href="#home" class="active">Ana Sayfa</a></li>
-            <li><a href="#about">Yetenekler</a></li>
-            <li><a href="#projects">Projeler</a></li>
-            <li><a href="#contact">İletişim</a></li>
-        </ul>
-    </nav>
+  <script>
+    const phrases = [
+      "Embedded Systems Developer",
+      "Robotics Enthusiast",
+      "IoT Projects",
+      "Automation & Control",
+      "Technical Innovator"
+    ];
 
-    <header id="home">
-        <div class="hero-container">
-            <div class="hero-image-wrapper">
-                <div class="image-border-glow"></div>
-                <img src="images/profile.JPG" alt="Mohammed Nouh ALMAGHRIBI" class="main-profile-img">
-            </div>
-            <div class="hero-content">
-                <span class="badge">Mekatronik Mühendisi</span>
-                <h1 class="name">Mohammed Nouh <br><span class="gradient-text">ALMAGHRIBI</span></h1>
-                <p class="description">
-                    Elektrik ve elektronik sistemlerin kurulumu, bakımı ve arıza giderimi konularında saha ve atölye tecrübesine sahip, 
-                    hassas montaj ve onarım işlemlerini profesyonelce yürüten bir uzman.
-                </p>
+    const typingElement = document.getElementById('typing');
+    let phraseIndex = 0;
+    let letterIndex = 0;
+    let currentPhrase = '';
+    let isDeleting = false;
+    let speed = 100;
 
-                <!-- Hero Stats -->
-                <div class="hero-stats">
-                    <div>
-                        <h3>3+</h3>
-                        <span>Yıl Deneyim</span>
-                    </div>
-                    <div>
-                        <h3>10+</h3>
-                        <span>Teknik Proje</span>
-                    </div>
-                    <div>
-                        <h3>Global</h3>
-                        <span>WRO Başarısı</span>
-                    </div>
-                </div>
+    function type() {
+      const fullPhrase = phrases[phraseIndex];
+      if (isDeleting) {
+        currentPhrase = fullPhrase.substring(0, letterIndex--);
+      } else {
+        currentPhrase = fullPhrase.substring(0, letterIndex++);
+      }
+      typingElement.innerHTML = currentPhrase + '<span class="cursor"></span>';
 
-                <div class="hero-btns">
-                    <a href="#projects" class="btn btn-primary">Projeleri Keşfet</a>
-                    <a href="#contact" class="btn btn-glass">Bize Ulaşın</a>
-                </div>
-            </div>
-        </div>
-    </header>
+      if (!isDeleting && letterIndex === fullPhrase.length + 1) {
+        isDeleting = true;
+        speed = 50;
+        setTimeout(type, 1000);
+      } else if (isDeleting && letterIndex === -1) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        speed = 100;
+        setTimeout(type, 500);
+      } else {
+        setTimeout(type, speed);
+      }
+    }
 
-    <section id="about">
-        <div class="section-header">
-            <h2 class="reveal">Teknik Uzmanlık</h2>
-            <div class="line"></div>
-        </div>
-        <div class="about-grid">
-            <div class="skill-card reveal">
-                <div class="icon-box"><i class="fas fa-tools"></i></div>
-                <h3>Bakım & Onarım</h3>
-                <p>Elektronik kart onarımı ve saha arıza tespiti süreçlerinde yüksek hassasiyet.</p>
-            </div>
-            <div class="skill-card reveal">
-                <div class="icon-box"><i class="fas fa-microchip"></i></div>
-                <h3>Donanım Tasarımı</h3>
-                <p>PCB tasarımı, prototipleme ve gömülü sistemlerin entegrasyonu.</p>
-            </div>
-            <div class="skill-card reveal">
-                <div class="icon-box"><i class="fas fa-industry"></i></div>
-                <h3>Endüstriyel AR-GE</h3>
-                <p>Üretim süreçlerinde teknik destek ve dokümantasyon disiplini.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="section-header">
-            <h2 class="reveal">Başarı Hikayeleri</h2>
-            <div class="line"></div>
-        </div>
-        <div class="project-grid">
-            <div class="project-card reveal">
-                <div class="project-img">
-                    <img class="project-slider" data-images="images/Project1-1.png,images/Project1-2.png" src="images/Project1-1.png" alt="IoT Project">
-                    <div class="project-overlay">
-                        <span class="year-tag">2025</span>
-                        <a class="project-btn">Projeyi İncele</a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>Akıllı Ev & IoT Modeli</h3>
-                    <p>Mezuniyet Projesi: Uzaktan kontrol edilebilir tam donanımlı sistem.</p>
-                </div>
-            </div>
-
-            <div class="project-card achievement reveal">
-                <div class="project-img">
-                    <img class="project-slider" data-images="images/Project1-1.png,images/Project1-2.png" src="images/Project1-1.png" alt="WRO">
-                    <div class="project-overlay">
-                        <span class="year-tag award">Dünya 2.liği</span>
-                        <a class="project-btn">Projeyi İncele</a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>Robot Olimpiyatları (WRO)</h3>
-                    <p>Akıllı Çiftlik Projesi ile küresel çapta büyük başarı.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" class="seamless-footer">
-        <div class="footer-content">
-            <h2 class="reveal">Yeni Projeler İçin <span class="gradient-text">Buradayım</span></h2>
-            
-            <div class="contact-info-seamless reveal">
-                <a href="tel:+905353215437" class="info-link">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>+90 535 321 54 37</span>
-                </a>
-                <a href="mailto:ae.an595@gmail.com" class="info-link">
-                    <i class="fas fa-envelope"></i>
-                    <span>ae.an595@gmail.com</span>
-                </a>
-                <div class="info-link no-hover">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>İstanbul, Türkiye</span>
-                </div>
-            </div>
-
-            <div class="social-seamless reveal">
-                <a href="https://wa.me/905353215437" class="s-link whatsapp" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" class="s-link linkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="s-link twitter" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" class="s-link facebook" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="s-link telegram" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-                <a href="#" class="s-link instagram" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>© 2026 Mohammed Nouh ALMAGHRIBI. Tüm Hakları Saklıdır.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Cursor Glow -->
-    <div class="cursor-glow"></div>
-
-    <script src="script.js"></script>
+    type();
+  </script>
 </body>
 </html>
