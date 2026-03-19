@@ -92,3 +92,71 @@ section { padding: 8rem 10%; }
 /* Reveal animation */
 .reveal { opacity:0; transform: translateY(40px); transition: all 0.6s ease-out; }
 .reveal.active { opacity:1; transform: translateY(0); }
+/* =========================================
+   التجاوب مع الشاشات (Responsive Design)
+   ========================================= */
+
+/* للشاشات المتوسطة واللوحية (Tablets) */
+@media (max-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1fr; /* جعل الصورة والنص في عمود واحد */
+        text-align: center;
+        gap: 3rem;
+        padding-top: 50px;
+    }
+    
+    .hero-image-wrapper {
+        margin: 0 auto; /* توسيط الصورة */
+    }
+    
+    .description {
+        margin: 0 auto 2.5rem auto; /* توسيط الوصف */
+    }
+
+    .hero-btns {
+        justify-content: center; /* توسيط الأزرار */
+    }
+
+    .name {
+        font-size: 3rem; /* تصغير الخط قليلاً */
+    }
+
+    /* جعل معلومات الاتصال تظهر بشكل أفضل */
+    .contact-info-seamless {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+/* لشاشات الهواتف المحمولة (Mobile) */
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem 5%;
+    }
+
+    .nav-links {
+        display: none; /* إخفاء الروابط في الموبايل مؤقتاً (يحتاج قائمة Hamburger) */
+    }
+
+    section, header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* مشروع واحد في كل سطر للموبايل */
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
