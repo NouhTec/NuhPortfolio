@@ -1,154 +1,52 @@
-/* التنسيق الجديد لقسم التواصل الاجتماعي والمعرفات */
+<footer id="contact">
+        <div class="footer-glass-wrap reveal">
+            <div class="footer-content-top">
+                <span class="badge-footer">İletişim Kanalı</span>
+                <h2>Yeni Projeler İçin <span class="highlight">Bağlantıda Kalalım</span></h2>
+            </div>
 
-footer {
-    padding: 100px 10% 50px 10%;
-    background: radial-gradient(circle at bottom, #111827 0%, #0b0f1a 100%);
-}
+            <div class="contact-grid-modern">
+                <div class="contact-card-mini">
+                    <div class="mini-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="mini-text">
+                        <span>Telefon</span>
+                        <p>+90 535 321 54 37</p>
+                    </div>
+                </div>
+                <div class="contact-card-mini">
+                    <div class="mini-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="mini-text">
+                        <span>E-posta</span>
+                        <p>ae.an595@gmail.com</p>
+                    </div>
+                </div>
+            </div>
 
-.footer-glass-wrap {
-    background: rgba(30, 41, 59, 0.4);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 40px;
-    padding: 60px 40px;
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
-}
+            <div class="social-hub">
+                <div class="hub-line"></div>
+                <div class="social-buttons-container">
+                    <a href="https://wa.me/905353215437" class="social-btn whatsapp" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-btn linkedin" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-btn x-twitter" title="X">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="#" class="social-btn telegram" title="Telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="#" class="social-btn instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="hub-line"></div>
+            </div>
 
-.badge-footer {
-    color: var(--primary);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.footer-content-top h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 40px;
-}
-
-/* Contact Cards Grid */
-.contact-grid-modern {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
-}
-
-.contact-card-mini {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 15px 25px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: var(--transition);
-}
-
-.contact-card-mini:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: var(--primary);
-    transform: translateY(-5px);
-}
-
-.mini-icon {
-    color: var(--primary);
-    font-size: 1.2rem;
-}
-
-.mini-text {
-    text-align: left;
-}
-
-.mini-text span {
-    display: block;
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.mini-text p {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-/* Social Buttons Hub */
-.social-hub {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.hub-line {
-    flex-grow: 1;
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
-}
-
-.social-buttons-container {
-    display: flex;
-    gap: 15px;
-}
-
-.social-btn {
-    width: 55px;
-    height: 55px;
-    background: rgba(15, 23, 42, 0.8);
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.4rem;
-    text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* Hover Colors for each brand */
-.social-btn.whatsapp:hover { background: #25D366; box-shadow: 0 0 20px rgba(37, 211, 102, 0.4); border-color: #25D366; }
-.social-btn.linkedin:hover { background: #0077b5; box-shadow: 0 0 20px rgba(0, 119, 181, 0.4); border-color: #0077b5; }
-.social-btn.x-twitter:hover { background: #000000; box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); border-color: #fff; }
-.social-btn.telegram:hover { background: #0088cc; box-shadow: 0 0 20px rgba(0, 136, 204, 0.4); border-color: #0088cc; }
-.social-btn.instagram:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-color: transparent; }
-
-.social-btn:hover {
-    transform: translateY(-10px) scale(1.1);
-    color: white;
-}
-
-.footer-bottom-text {
-    margin-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 30px;
-}
-
-.footer-bottom-text p {
-    font-size: 0.9rem;
-    color: var(--text-light);
-}
-
-.footer-bottom-text span {
-    font-size: 0.75rem;
-    color: var(--text-dim);
-}
-
-@media (max-width: 768px) {
-    .social-buttons-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-    }
-    .hub-line { display: none; }
-    .footer-glass-wrap { padding: 40px 20px; }
-}
+            <div class="footer-bottom-text">
+                <p>© 2026 <strong>Mohammed Nouh ALMAGHRIBI</strong></p>
+                <span>Mekatronik Mühendisliği & Dijital İnovasyon</span>
+            </div>
+        </div>
+    </footer>
