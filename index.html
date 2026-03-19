@@ -1,74 +1,108 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="tr" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مهندس ميكاترونيكس | معرض الأعمال</title>
+    <title>Mekatronik Mühendisi | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav>
-        <div class="logo">ميكاترونيكس</div>
+        <div class="logo">Mekatronik<span class="highlight">.</span></div>
         <ul class="nav-links">
-            <li><a href="#home">الرئيسية</a></li>
-            <li><a href="#about">عني</a></li>
-            <li><a href="#projects">المشاريع</a></li>
-            <li><a href="#contact">تواصل معي</a></li>
+            <li><a href="#home">Ana Sayfa</a></li>
+            <li><a href="#about">Hakkımda</a></li>
+            <li><a href="#projects">Projeler</a></li>
+            <li><a href="#contact">İletişim</a></li>
         </ul>
     </nav>
 
     <header id="home">
-        <div class="hero-content">
-            <h1>أهلاً، أنا <span class="highlight">مهندس ميكاترونيكس</span></h1>
-            <p>متخصص في الأنظمة المدمجة، الأتمتة، وتطوير حلول الويب التقنية.</p>
-            <a href="#projects" class="btn">عرض الأعمال</a>
+        <div class="hero-container">
+            <div class="hero-image">
+                <img src="profile.jpg" alt="Mekatronik Mühendisi Profili">
+            </div>
+            <div class="hero-content">
+                <span class="subtitle">Merhaba, Ben</span>
+                <h1>Bir <span class="highlight">Mekatronik Mühendisi</span></h1>
+                <p>Gömülü sistemler, endüstriyel otomasyon ve modern web teknolojileri (Web Apps, AppSheet) konularında uzmanlaşmış, disiplinlerarası çözümler üreten bir mühendisim. Karmaşık mühendislik problemlerine yenilikçi ve verimli yaklaşımlar getiriyorum.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn">Projeleri İncele</a>
+                    <a href="#contact" class="btn btn-outline">İletişime Geç</a>
+                </div>
+            </div>
         </div>
     </header>
 
     <section id="about">
-        <h2>حول المهندس</h2>
+        <div class="section-title">
+            <h2>Uzmanlık Alanları</h2>
+            <p>Donanım ve yazılımın kesiştiği noktadaki becerilerim.</p>
+        </div>
         <div class="about-grid">
             <div class="skill-card">
                 <i class="fas fa-microchip"></i>
-                <h3>الإلكترونيات</h3>
-                <p>تصميم الدوائر المطبوعة (PCB) والأنظمة المدمجة.</p>
+                <h3>Elektronik & Gömülü Sistemler</h3>
+                <ul>
+                    <li>PCB Tasarımı (Altium/KiCad)</li>
+                    <li>Mikrokontrolcüler (STM32, Arduino)</li>
+                    <li>IoT Protokolleri (MQTT, HTTP)</li>
+                </ul>
             </div>
             <div class="skill-card">
                 <i class="fas fa-code"></i>
-                <h3>البرمجة</h3>
-                <p>تطوير تطبيقات الويب (AppSheet, Web Apps) وبرمجة المتحكمات.</p>
+                <h3>Yazılım Geliştirme</h3>
+                <ul>
+                    <li>Web Tabanlı Uygulamalar</li>
+                    <li>AppSheet Çözümleri</li>
+                    <li>C/C++, Python, JavaScript</li>
+                </ul>
             </div>
             <div class="skill-card">
                 <i class="fas fa-cogs"></i>
-                <h3>الأتمتة</h3>
-                <p>تطوير الأنظمة الميكانيكية والتحكم الصناعي.</p>
+                <h3>Otomasyon & Kontrol</h3>
+                <ul>
+                    <li>PLC Programlama (Siemens/Beckhoff)</li>
+                    <li>Robotik Sistemler</li>
+                    <li>Mekanik Tasarım (SolidWorks)</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section id="projects">
-        <h2>أبرز المشاريع</h2>
+        <div class="section-title">
+            <h2>Öne Çıkan Projeler</h2>
+            <p>Mühendislik ve yazılım yetkinliklerimi birleştirdiğim çalışmalarım.</p>
+        </div>
         <div class="project-grid">
             <div class="project-card">
-                <div class="project-img"></div>
+                <div class="project-img">
+                    <img src="project1.jpg" alt="Veri Yönetim Sistemi">
+                </div>
                 <div class="project-info">
-                    <h3>نظام إدارة البيانات</h3>
-                    <p>تطبيق ويب متكامل باستخدام Google Sheets و AppSheet.</p>
+                    <h3>Endüstriyel Veri Yönetimi</h3>
+                    <p>AppSheet ve Google Sheets entegrasyonu ile geliştirilmiş, saha verilerini anlık izleyen web uygulaması.</p>
+                    <a href="#" class="more-link">Detayları Gör <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             </div>
     </section>
 
     <footer id="contact">
-        <p>هل لديك مشروع قادم؟</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
+        <div class="footer-content">
+            <h3>Gelecek Projeniz İçin Hazırım</h3>
+            <p>Yenilikçi fikirlerinizi hayata geçirmek veya teknik detayları konuşmak için benimle iletişime geçebilirsiniz.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copy">© 2026 Tüm Hakları Saklıdır.</p>
         </div>
-        <p class="copy">© 2026 جميع الحقوق محفوظة</p>
     </footer>
 
     <script src="script.js"></script>
