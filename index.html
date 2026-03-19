@@ -10,11 +10,16 @@
 </head>
 <body>
 
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
     <nav>
-        <div class="logo">M. Nouh<span class="highlight">.</span></div>
+        <div class="logo">M. Nouh<span class="dot">.</span></div>
         <ul class="nav-links">
             <li><a href="#home">Ana Sayfa</a></li>
-            <li><a href="#about">Yetkinlikler</a></li>
+            <li><a href="#about">Yetenekler</a></li>
             <li><a href="#projects">Projeler</a></li>
             <li><a href="#contact">İletişim</a></li>
         </ul>
@@ -23,102 +28,132 @@
     <header id="home">
         <div class="hero-container">
             <div class="hero-image-wrapper">
+                <div class="image-border-glow"></div>
                 <img src="images/profile.JPG" alt="Mohammed Nouh ALMAGHRIBI" class="main-profile-img">
             </div>
             <div class="hero-content">
-                <span class="subtitle">Hoş Geldiniz, Ben</span>
-                <h1 class="name">Mohammed Nouh <br><span class="highlight">ALMAGHRIBI</span></h1>
-                <h2 class="job-title">MEKATRONİK MÜHENDİSİ</h2>
+                <span class="badge">Mekatronik Mühendisi</span>
+                <h1 class="name">Mohammed Nouh <br><span class="gradient-text">ALMAGHRIBI</span></h1>
                 <p class="description">
                     Elektrik ve elektronik sistemlerin kurulumu, bakımı ve arıza giderimi konularında saha ve atölye tecrübesine sahip, 
-                    kart ve ünite düzeyinde hassas montaj ve onarım işlemlerini profesyonelce yürüten bir mühendisim.
+                    hassas montaj ve onarım işlemlerini profesyonelce yürüten bir uzman.
                 </p>
                 <div class="hero-btns">
-                    <a href="#projects" class="btn">Projeleri Gör</a>
-                    <a href="#contact" class="btn btn-outline">İletişime Geç</a>
+                    <a href="#projects" class="btn btn-primary">Projeleri Keşfet</a>
+                    <a href="#contact" class="btn btn-glass">Bize Ulaşın</a>
                 </div>
             </div>
         </div>
     </header>
 
     <section id="about">
-        <div class="section-title">
-            <h2>Teknik Yetkinlikler</h2>
+        <div class="section-header">
+            <h2 class="reveal">Teknik Uzmanlık</h2>
+            <div class="line"></div>
         </div>
         <div class="about-grid">
-            <div class="skill-card">
-                <i class="fas fa-tools"></i>
+            <div class="skill-card reveal">
+                <div class="icon-box"><i class="fas fa-tools"></i></div>
                 <h3>Bakım & Onarım</h3>
-                <ul>
-                    <li>Elektronik Kart Onarımı</li>
-                    <li>Hassas Montaj İşlemleri</li>
-                    <li>Arıza Tespit & Giderim</li>
-                </ul>
+                <p>Elektronik kart onarımı ve saha arıza tespiti süreçlerinde yüksek hassasiyet.</p>
             </div>
-            <div class="skill-card">
-                <i class="fas fa-microchip"></i>
-                <h3>Donanım Geliştirme</h3>
-                <ul>
-                    <li>PCB Tasarım & Prototipleme</li>
-                    <li>Ölçüm ve Test Yöntemleri</li>
-                    <li>Gömülü Sistemler</li>
-                </ul>
+            <div class="skill-card reveal">
+                <div class="icon-box"><i class="fas fa-microchip"></i></div>
+                <h3>Donanım Tasarımı</h3>
+                <p>PCB tasarımı, prototipleme ve gömülü sistemlerin entegrasyonu.</p>
             </div>
-            <div class="skill-card">
-                <i class="fas fa-industry"></i>
-                <h3>Endüstriyel Süreçler</h3>
-                <ul>
-                    <li>AR-GE Desteği</li>
-                    <li>Dokümantasyon Disiplini</li>
-                    <li>İş Güvenliği (İSG) Uyumu</li>
-                </ul>
+            <div class="skill-card reveal">
+                <div class="icon-box"><i class="fas fa-industry"></i></div>
+                <h3>Endüstriyel AR-GE</h3>
+                <p>Üretim süreçlerinde teknik destek ve dokümantasyon disiplini.</p>
             </div>
         </div>
     </section>
 
     <section id="projects">
-        <div class="section-title">
-            <h2>Öne Çıkan Projeler & Başarılar</h2>
+        <div class="section-header">
+            <h2 class="reveal">Başarı Hikayeleri</h2>
+            <div class="line"></div>
         </div>
         <div class="project-grid">
-            <div class="project-card">
-                <div class="project-img"><img src="images/Project1-1.png" alt="IoT"><div class="tag-floating">IoT - 2025</div></div>
-                <div class="project-info"><h3>Akıllı Ev Modeli (Mezuniyet Projesi)</h3><p>IoT tabanlı uzaktan kontrol edilebilir prototip tasarımı.</p></div>
+            <div class="project-card reveal">
+                <div class="project-img">
+                    <img src="images/Project1-1.png" alt="IoT Project">
+                    <div class="project-overlay">
+                        <span class="year-tag">2025</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Akıllı Ev & IoT Modeli</h3>
+                    <p>Mezuniyet Projesi: Uzaktan kontrol edilebilir tam donanımlı sistem.</p>
+                </div>
             </div>
-            <div class="project-card">
-                <div class="project-img"><img src="images/Project1-1.png" alt="Software"><div class="tag-floating">Software - 2025</div></div>
-                <div class="project-info"><h3>Okul & Kur'an Kursu Yönetim Sistemi</h3><p>Eğitim kurumları için entegre veri yönetim yazılımı.</p></div>
-            </div>
-            <div class="project-card achievement">
-                <div class="project-img"><img src="images/Project1-1.png" alt="WRO"><div class="tag-floating award">Dünya 2.liği - 2018</div></div>
-                <div class="project-info"><h3>Dünya Robot Olimpiyatları (WRO)</h3><p>Akıllı Çiftlik Projesi ile dünya ikinciliği ödülü.</p></div>
+
+            <div class="project-card achievement reveal">
+                <div class="project-img">
+                    <img src="images/Project1-1.png" alt="WRO">
+                    <div class="project-overlay">
+                        <span class="year-tag award">Dünya 2.liği</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Robot Olimpiyatları (WRO)</h3>
+                    <p>Akıllı Çiftlik Projesi ile küresel çapta büyük başarı.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <footer id="contact">
-        <div class="footer-container">
-            <div class="footer-top">
-                <h2>İletişim</h2>
-                <div class="contact-details">
-                    <div class="det-item"><i class="fas fa-phone-alt"></i> +90 535 321 54 37</div>
-                    <div class="det-item"><i class="fas fa-envelope"></i> ae.an595@gmail.com</div>
-                    <div class="det-item"><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</div>
+        <div class="footer-glass-wrap reveal">
+            <div class="footer-content-top">
+                <span class="badge-footer">İletişim Kanalı</span>
+                <h2>Yeni Projeler İçin <span class="gradient-text">Bağlantıda Kalalım</span></h2>
+            </div>
+
+            <div class="contact-grid-modern">
+                <div class="contact-card-mini">
+                    <div class="mini-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="mini-text">
+                        <span>Telefon</span>
+                        <p>+90 535 321 54 37</p>
+                    </div>
+                </div>
+                <div class="contact-card-mini">
+                    <div class="mini-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="mini-text">
+                        <span>E-posta</span>
+                        <p>ae.an595@gmail.com</p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="footer-divider"></div>
 
-            <div class="social-links-integrated">
-                <a href="https://wa.me/905353215437" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <div class="social-hub">
+                <div class="hub-line"></div>
+                <div class="social-buttons-container">
+                    <a href="https://wa.me/905353215437" class="social-btn whatsapp" title="WhatsApp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-btn linkedin" title="LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-btn x-twitter" title="X" target="_blank">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="#" class="social-btn telegram" title="Telegram" target="_blank">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="#" class="social-btn instagram" title="Instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="hub-line"></div>
             </div>
 
-            <p class="copy">© 2026 Mohammed Nouh ALMAGHRIBI. Tüm Hakları Saklıdır.</p>
+            <div class="footer-bottom-text">
+                <p>© 2026 <strong>Mohammed Nouh ALMAGHRIBI</strong></p>
+                <span>Mekatronik Mühendisliği & Dijital İnovasyon</span>
+            </div>
         </div>
     </footer>
 
