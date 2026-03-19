@@ -111,112 +111,85 @@ section { padding: 8rem 10%; }
 .project-info { padding: 2rem; }
 .project-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.5); border-color: var(--primary); }
 
-/* Interactive Contact Hub (Footer) */
-footer {
-    padding: 100px 10% 50px 10%;
-    background: radial-gradient(circle at bottom, #111827 0%, #0b0f1a 100%);
-}
-
-.footer-glass-wrap {
-    background: rgba(30, 41, 59, 0.4);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 40px;
-    padding: 60px 40px;
+/* Seamless Footer (التواصل المدمج بلا بطاقات) */
+.seamless-footer {
+    padding: 100px 10% 40px;
+    background: transparent; /* يندمج مع خلفية الصفحة */
     text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    position: relative;
 }
 
-.badge-footer {
-    color: var(--primary);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 15px;
+.seamless-footer h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 60px;
 }
 
-.footer-content-top h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 40px; }
-
-/* Contact Cards Grid */
-.contact-grid-modern {
+/* Contact Info Text */
+.contact-info-seamless {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-bottom: 50px;
+    gap: 50px;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
-.contact-card-mini {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 15px 25px;
-    border-radius: 20px;
+.info-link {
     display: flex;
     align-items: center;
-    gap: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    gap: 12px;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
     transition: var(--transition);
 }
 
-.contact-card-mini:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: var(--primary);
-    transform: translateY(-5px);
-}
-
-.mini-icon { color: var(--primary); font-size: 1.2rem; }
-.mini-text { text-align: left; }
-.mini-text span { display: block; font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
-.mini-text p { font-size: 1rem; font-weight: 600; }
-
-/* Social Buttons Hub */
-.social-hub {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.hub-line {
-    flex-grow: 1;
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
-}
-
-.social-buttons-container { display: flex; gap: 15px; }
-
-.social-btn {
-    width: 55px;
-    height: 55px;
-    background: rgba(15, 23, 42, 0.8);
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+.info-link i {
+    color: var(--primary);
     font-size: 1.4rem;
-    text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Hover Colors for Brands */
-.social-btn.whatsapp:hover { background: #25D366; box-shadow: 0 0 20px rgba(37, 211, 102, 0.4); border-color: #25D366; }
-.social-btn.linkedin:hover { background: #0077b5; box-shadow: 0 0 20px rgba(0, 119, 181, 0.4); border-color: #0077b5; }
-.social-btn.x-twitter:hover { background: #ffffff; color: #000; box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); border-color: #fff; }
-.social-btn.telegram:hover { background: #0088cc; box-shadow: 0 0 20px rgba(0, 136, 204, 0.4); border-color: #0088cc; }
-.social-btn.instagram:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-color: transparent; }
+.info-link:not(.no-hover):hover {
+    color: var(--text);
+    transform: translateY(-3px);
+    text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
 
-.social-btn:hover { transform: translateY(-10px) scale(1.1); color: white; }
+/* Social Icons (بدون خلفيات) */
+.social-seamless {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
 
-.footer-bottom-text { margin-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 30px; }
-.footer-bottom-text p { font-size: 0.9rem; color: var(--text-light); }
-.footer-bottom-text span { font-size: 0.75rem; color: var(--text-dim); }
+.s-link {
+    color: var(--text-dim);
+    font-size: 1.8rem;
+    transition: var(--transition);
+}
 
-/* Scroll Reveal effect */
+.s-link:hover {
+    transform: translateY(-5px) scale(1.15);
+}
+
+/* ألوان التوهج لكل منصة عند التمرير فقط */
+.s-link.whatsapp:hover { color: #25D366; filter: drop-shadow(0 0 12px rgba(37,211,102,0.5)); }
+.s-link.linkedin:hover { color: #0077b5; filter: drop-shadow(0 0 12px rgba(0,119,181,0.5)); }
+.s-link.twitter:hover { color: #fff; filter: drop-shadow(0 0 12px rgba(255,255,255,0.5)); }
+.s-link.telegram:hover { color: #0088cc; filter: drop-shadow(0 0 12px rgba(0,136,204,0.5)); }
+.s-link.instagram:hover { color: #e1306c; filter: drop-shadow(0 0 12px rgba(225,48,108,0.5)); }
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 30px;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+/* Scroll Reveal */
 .reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
@@ -226,11 +199,9 @@ footer {
     .hero-image-wrapper { margin: 0 auto; width: 260px; height: 260px; }
     .name { font-size: 3rem; }
     .hero-btns { justify-content: center; }
+    .contact-info-seamless { gap: 20px; flex-direction: column; align-items: center; }
 }
 
 @media (max-width: 768px) {
-    .social-buttons-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-    .hub-line { display: none; }
-    .footer-glass-wrap { padding: 40px 20px; }
     .nav-links { display: none; }
 }
