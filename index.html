@@ -18,7 +18,7 @@
     <nav>
         <div class="logo">M. Nouh<span class="dot">.</span></div>
         <ul class="nav-links">
-            <li><a href="#home">Ana Sayfa</a></li>
+            <li><a href="#home" class="active">Ana Sayfa</a></li>
             <li><a href="#about">Yetenekler</a></li>
             <li><a href="#projects">Projeler</a></li>
             <li><a href="#contact">İletişim</a></li>
@@ -38,6 +38,23 @@
                     Elektrik ve elektronik sistemlerin kurulumu, bakımı ve arıza giderimi konularında saha ve atölye tecrübesine sahip, 
                     hassas montaj ve onarım işlemlerini profesyonelce yürüten bir uzman.
                 </p>
+
+                <!-- Hero Stats -->
+                <div class="hero-stats">
+                    <div>
+                        <h3>3+</h3>
+                        <span>Yıl Deneyim</span>
+                    </div>
+                    <div>
+                        <h3>10+</h3>
+                        <span>Teknik Proje</span>
+                    </div>
+                    <div>
+                        <h3>Global</h3>
+                        <span>WRO Başarısı</span>
+                    </div>
+                </div>
+
                 <div class="hero-btns">
                     <a href="#projects" class="btn btn-primary">Projeleri Keşfet</a>
                     <a href="#contact" class="btn btn-glass">Bize Ulaşın</a>
@@ -78,9 +95,10 @@
         <div class="project-grid">
             <div class="project-card reveal">
                 <div class="project-img">
-                    <img src="images/Project1-1.png" alt="IoT Project">
+                    <img class="project-slider" data-images="images/Project1-1.png,images/Project1-2.png" src="images/Project1-1.png" alt="IoT Project">
                     <div class="project-overlay">
                         <span class="year-tag">2025</span>
+                        <a class="project-btn">Projeyi İncele</a>
                     </div>
                 </div>
                 <div class="project-info">
@@ -91,9 +109,10 @@
 
             <div class="project-card achievement reveal">
                 <div class="project-img">
-                    <img src="images/Project1-1.png" alt="WRO">
+                    <img class="project-slider" data-images="images/Project1-1.png,images/Project1-2.png" src="images/Project1-1.png" alt="WRO">
                     <div class="project-overlay">
                         <span class="year-tag award">Dünya 2.liği</span>
+                        <a class="project-btn">Projeyi İncele</a>
                     </div>
                 </div>
                 <div class="project-info">
@@ -137,6 +156,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
 
     <script src="script.js"></script>
 </body>
