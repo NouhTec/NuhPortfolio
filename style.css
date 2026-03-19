@@ -1,9 +1,8 @@
-/* Temel Değişkenler ve Sıfırlama */
 :root {
-    --primary-color: #00d4ff; /* Canlı Teknoloji Mavisi */
+    --primary-color: #00d4ff;
     --primary-dark: #0099cc;
-    --bg-dark: #0f172a; /* Çok Koyu Mavi/Siyah */
-    --card-bg: #1e293b; /* Koyu Gri/Mavi */
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
     --text-light: #f8fafc;
     --text-gray: #94a3b8;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -17,7 +16,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Modern tarayıcılar için yumuşak kaydırma */
+    scroll-behavior: smooth;
     font-size: 16px;
 }
 
@@ -31,7 +30,7 @@ body {
 
 .highlight { color: var(--primary-color); }
 
-/* Navigasyon Menüsü */
+/* Navigasyon */
 nav {
     display: flex;
     justify-content: space-between;
@@ -48,7 +47,6 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--text-light);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -71,15 +69,14 @@ nav {
 
 .nav-links a:hover { color: var(--primary-color); }
 
-/* Hero / Profil Bölümü */
+/* Hero / Profil */
 header {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10%;
+    padding: 100px 10% 50px 10%;
     background: radial-gradient(circle at 20% 30%, #1e293b 0%, #0f172a 100%);
-    padding-top: 80px; /* Navigasyon için boşluk */
 }
 
 .hero-container {
@@ -91,12 +88,15 @@ header {
 
 .hero-image {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .hero-image img {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 50%; /* Yuvarlak profil */
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* لضمان عدم تمدد الصورة */
+    border-radius: 50%;
     border: 4px solid var(--card-bg);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     transition: var(--transition);
@@ -105,34 +105,21 @@ header {
 .hero-image::after {
     content: '';
     position: absolute;
-    top: -15px;
-    left: -15px;
-    width: 100%;
-    height: 100%;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     border: 2px solid var(--primary-color);
     z-index: -1;
-    opacity: 0.5;
-}
-
-.hero-image img:hover {
-    transform: scale(1.03);
-    border-color: var(--primary-color);
-}
-
-.hero-content .subtitle {
-    color: var(--primary-color);
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    opacity: 0.4;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     font-weight: 700;
     margin: 0.5rem 0 1.5rem 0;
-    line-height: 1.2;
 }
 
 .hero-content p {
@@ -169,43 +156,23 @@ header {
     box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
 }
 
-.btn-outline:hover {
-    background: var(--primary-color);
-    color: #000;
-}
-
-/* Bölüm Başlıkları */
+/* Bölümler */
 section { padding: 8rem 10%; }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 5rem;
-}
+.section-title { text-align: center; margin-bottom: 5rem; }
 
-.section-title h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    position: relative;
-    display: inline-block;
-}
+.section-title h2 { font-size: 2.5rem; position: relative; display: inline-block; }
 
 .section-title h2::after {
     content: '';
     display: block;
-    width: 60px;
+    width: 50%;
     height: 4px;
     background: var(--primary-color);
-    margin: 10px auto 0 auto;
-    border-radius: 2px;
+    margin: 10px auto;
 }
 
-.section-title p {
-    color: var(--text-gray);
-    font-size: 1.1rem;
-}
-
-/* Yetkinlikler (About) */
+/* Yetkinlikler */
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -214,53 +181,27 @@ section { padding: 8rem 10%; }
 
 .skill-card {
     background: var(--card-bg);
-    padding: 3rem 2rem;
+    padding: 2.5rem;
     border-radius: 15px;
-    text-align: left;
+    border-bottom: 4px solid transparent;
     transition: var(--transition);
-    border: 1px solid transparent;
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(0, 212, 255, 0.2);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
 }
 
-.skill-card i {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    display: inline-block;
-}
+.skill-card i { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1.5rem; }
 
-.skill-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-}
+.skill-card ul { list-style: none; margin-top: 1rem; color: var(--text-gray); }
 
-.skill-card ul {
-    list-style: none;
-    color: var(--text-gray);
-}
-
-.skill-card ul li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.skill-card ul li::before {
-    content: '▹';
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-}
+.skill-card ul li::before { content: "▹ "; color: var(--primary-color); }
 
 /* Projeler */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
 }
 
@@ -271,119 +212,27 @@ section { padding: 8rem 10%; }
     transition: var(--transition);
 }
 
-.project-card:hover {
-    transform: scale(1.02);
-}
+.project-img { height: 220px; overflow: hidden; }
 
-.project-img {
-    height: 200px;
-    background: #2d3748; /* Resim yoksa varsayılan renk */
-    overflow: hidden;
-}
+.project-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
 
-.project-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
+.project-card:hover .project-img img { transform: scale(1.1); }
 
-.project-card:hover .project-img img {
-    transform: scale(1.1);
-}
-
-.project-info {
-    padding: 2rem;
-}
-
-.project-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.project-info p {
-    color: var(--text-gray);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    height: 60px; /* Metin yüksekliğini sabitlemek için */
-    overflow: hidden;
-}
-
-.more-link {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.more-link i {
-    transition: var(--transition);
-}
-
-.more-link:hover i {
-    transform: translateX(5px);
-}
+.project-info { padding: 2rem; }
 
 /* Footer */
-footer {
-    background: #020617;
-    padding: 5rem 10% 2rem 10%;
-    text-align: center;
-}
+footer { background: #020617; padding: 5rem 10% 2rem 10%; text-align: center; }
 
-.footer-content h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
+.social-links { margin-bottom: 2rem; }
 
-.footer-content p {
-    color: var(--text-gray);
-    max-width: 600px;
-    margin: 0 auto 2.5rem auto;
-}
+.social-links a { color: var(--text-light); font-size: 1.8rem; margin: 0 1rem; transition: var(--transition); }
 
-.social-links {
-    margin-bottom: 3rem;
-}
+.social-links a:hover { color: var(--primary-color); }
 
-.social-links a {
-    color: var(--text-light);
-    font-size: 1.8rem;
-    margin: 0 1.2rem;
-    transition: var(--transition);
-    display: inline-block;
-}
+.copy { font-size: 0.8rem; color: #475569; margin-top: 2rem; }
 
-.social-links a:hover {
-    color: var(--primary-color);
-    transform: translateY(-3px);
-}
-
-.copy {
-    font-size: 0.85rem;
-    color: #475569 !important;
-}
-
-/* Duyarlılık (Responsiveness) */
+/* Responsive */
 @media (max-width: 992px) {
-    .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-    }
-    .hero-image img {
-        max-width: 250px;
-    }
-    .hero-content p { margin: 0 auto 2.5rem auto; }
+    .hero-container { grid-template-columns: 1fr; text-align: center; }
     .hero-btns { justify-content: center; }
-    .hero-content h1 { font-size: 2.5rem; }
-}
-
-@media (max-width: 768px) {
-    html { font-size: 14px; }
-    .nav-links { display: none; } /* Basitlik için mobil menü gizlendi */
-    section { padding: 5rem 5%; }
 }
